@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline red;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+nav {
+  background-color: lightblue;
+  padding: 100px 50px;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  margin: 20px;
+}
+
+main {
+  margin: 50px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 50px;
+}
+
+.me {
+  text-align: center;
+  grid-row: 1 / span 3;
+}
+
+.card h2 {
+  width: 300px;
+  border-bottom: 1px solid;
+}
