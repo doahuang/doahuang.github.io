@@ -1,40 +1,74 @@
+h1, h2, h3, p, a {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 a:hover {
-  text-decoration: underline red;
+  color: red;
 }
+
+section h3 {
+  border-bottom: 1px solid;
+  width: 200px;
+}
+
+/* layout */
 
 body {
+  margin: 0 auto;
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
 }
 
-nav {
+header, footer {
   background-color: lightskyblue;
-  padding: 100px 50px 400px 20px;
-  text-align: center;
 }
 
-nav li {
-  list-style: none;
+header, aside, footer {
+  padding: 0 20px;
 }
 
-nav a {
-  display: block;
-  margin: 20px;
+header, aside, section, footer {
+  flex: 1 100%;
 }
 
-main {
-  margin: 50px 100px;
-  display: grid;
-  grid-template-columns: 250px 250px;
-  grid-gap: 50px;
+header, aside, footer {
+  display: flex;
 }
 
-.card h2 {
-  width: 200px;
-  border-bottom: 1px solid;
+aside, section {
+  margin: 10px 0 10px 50px;
+}
+
+header ul, footer ul {
+  display: flex;
+  align-items: center;
+}
+
+header ul li, footer ul li {
+  margin-right: 30px;
+}
+
+@media all and (min-width: 600px) {
+
+  aside {
+    flex: 1;
+  }
+
+  section {
+    flex: 3;
+  }
+
+}
+
+section ul {
+  margin-bottom: 50px;
 }
