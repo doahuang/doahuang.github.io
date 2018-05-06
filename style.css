@@ -61,7 +61,7 @@ section ul {
   margin-bottom: 50px;
 }
 
-@media all and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
 
   aside {
     flex: 1;
@@ -73,10 +73,14 @@ section ul {
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 
   body {
     width: 350px;
+  }
+
+  header, footer {
+    justify-content: center;
   }
 
 }
