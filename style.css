@@ -17,64 +17,46 @@ a:hover {
 
 /* layout */
 
-body {
+header, aside, section, footer {
   display: flex;
-  flex-wrap: wrap;
 }
 
 header, footer {
-  flex: 1 100%;
   background-color: lightskyblue;
-  padding: 20px 100px;
+  padding: 10px 100px;
+  justify-content: flex-end;
 }
 
 header ul, footer ul {
   display: flex;
-  justify-content: flex-end;
 }
 
-header ul li, footer ul li {
-  margin-left: 30px;
+header li, footer li {
+  margin: 0 10px;
 }
 
-header {
-  margin-bottom: 100px;
+aside, section {
+  margin: 50px 0;
+  justify-content: space-around;
 }
 
-footer {
-  margin-top: 100px;
-}
-
-aside {
-  margin-left: 100px;
-}
-
-section {
-  display: flex;
-  flex: 3;
+aside img {
+  transform: scale(0.8);
 }
 
 section div {
-  margin: 0 50px;
+  padding: 0 20px 50px;
 }
 
-section div h3 {
+h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 480px) {
 
-  body {
-    display: grid;
-  }
-
-  header, aside, section, footer {
+  header, section, footer {
     display: grid;
     justify-content: center;
-  }
-
-  section div {
-    margin-top: 50px;
   }
 
 }
