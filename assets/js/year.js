@@ -1,3 +1,4 @@
 (function () {
-  document.write(new Date().getFullYear());
+    document.querySelector('.copyright > li').innerHTML =
+        new Date().getFullYear();
 })();
