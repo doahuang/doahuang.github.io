@@ -291,11 +291,6 @@ input, select, textarea {
 		margin-bottom: 2em;
 	}
 
-		header.major > :first-child {
-			margin-bottom: 0;
-			width: calc(100% + 0.5em);
-		}
-
 			header.major > :first-child:after {
 				content: '';
 				background-color: #ffffff;
@@ -382,14 +377,8 @@ input, select, textarea {
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
+		margin-bottom: 2em;
 	}
-
-		ul li {
-			padding-left: 0.5em;
-		}
 
 		ul.alt {
 			list-style: none;
@@ -424,57 +413,11 @@ input, select, textarea {
 
 	ul.actions {
 		display: flex;
-		cursor: default;
-		list-style: none;
-		margin-left: -1em;
-		padding-left: 0;
 	}
 
-		ul.actions li {
-			padding: 0 0 0 1em;
-			vertical-align: middle;
+		ul.actions li + li {
+			padding-left: 1em;
 		}
-
-		ul.actions.special {
-			justify-content: center;
-			width: 100%;
-			margin-left: 0;
-		}
-
-			ul.actions.special li:first-child {
-				padding-left: 0;
-			}
-
-		ul.actions.stacked {
-			flex-direction: column;
-			margin-left: 0;
-		}
-
-			ul.actions.stacked li {
-				padding: 1.3em 0 0 0;
-			}
-
-				ul.actions.stacked li:first-child {
-					padding-top: 0;
-				}
-
-		ul.actions.fit {
-			width: calc(100% + 1em);
-		}
-
-			ul.actions.fit li {
-				flex-grow: 1;
-				flex-shrink: 1;
-				width: 100%;
-			}
-
-				ul.actions.fit li > * {
-					width: 100%;
-				}
-
-			ul.actions.fit.stacked {
-				width: 100%;
-			}
 
 /* Icons */
 
@@ -1063,6 +1006,7 @@ input, select, textarea {
 
 		#banner h1 {
 			font-size: 3.25em;
+			margin-bottom: 0;
 		}
 
 		#banner > .inner {
@@ -1075,34 +1019,17 @@ input, select, textarea {
 				display: none;
 			}
 
-			#banner > .inner header {
-				width: auto;
-			}
-
-				#banner > .inner header > :first-child {
-					width: auto;
-				}
-
-					#banner > .inner header > :first-child:after {
-						max-width: 100%;
-					}
-
-			#banner > .inner .content {
+			#banner .content {
 				display: flex;
-				align-items: center;
-				margin: 0 0 2em 0;
+				gap: 2em;
+				margin-bottom: 2em;
 			}
 
-				#banner > .inner .content > * {
-					margin-right: 1.5em;
-					margin-bottom: 0;
+				#banner .content > article {
+					width: 100%;
 				}
 
-				#banner > .inner .content > :last-child {
-					margin-right: 0;
-				}
-
-				#banner > .inner .content p {
+				#banner .content p {
 					font-size: 1em;
 					font-weight: 600;
 					letter-spacing: 0.25em;
@@ -1143,21 +1070,8 @@ input, select, textarea {
 					font-size: 2em;
 				}
 
-				#banner > .inner .content {
+				#banner .content {
 					display: block;
-				}
-
-					#banner > .inner .content > * {
-						margin-right: 0;
-						margin-bottom: 2em;
-					}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-				#banner > .inner .content p br {
-					display: none;
 				}
 
 		}
